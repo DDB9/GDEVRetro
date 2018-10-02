@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour {
 
-	public List<Sprite> cars = new List<Sprite>();
-
 	public GameObject car;
 
 	void Start(){
@@ -13,7 +11,9 @@ public class EnemySpawner : MonoBehaviour {
 	}
 	
 	private IEnumerator carSpawner(){
-		Instantiate(car, transform.position, transform.rotation);
-		yield return new WaitForSeconds(2);
+		while (true){
+			Instantiate(car, transform.position, transform.rotation);
+			yield return new WaitForSeconds(1.75f);
+		}
 	}
 }
