@@ -5,12 +5,16 @@ using UnityEngine.AI;
 
 public class Car : MonoBehaviour {
 
+	public GameObject target;
+
 	public Rigidbody2D rigBod;
 
 	public float minSpeed = 1;
 	public float maxSpeed = 5;
 
-	public float speed;
+	private float speed;
+
+    public float rotationSpeed = 5;
 
 	void Start(){
 		speed = Random.Range(minSpeed, maxSpeed);
@@ -22,7 +26,9 @@ public class Car : MonoBehaviour {
 		rigBod.MovePosition(rigBod.position + forward * Time.fixedDeltaTime * speed);
 	}
 
-	void OnTriggerEnter(Collider other){
-		transform.position = Vector2.MoveTowards(transform.position, other.transform.position, 5f);
+	void OnTriggerEnter2D(Collider2D other){
+         transform.rotation = Quaternion.Slerp(transform.rotation, 
+		 									   Quaternion.LookRotation(other.transform.position - transform.position), 
+		 									   rotationSpeed * Time.deltaTime);
 	}
 }

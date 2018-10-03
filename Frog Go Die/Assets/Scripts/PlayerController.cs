@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
+	public static PlayerController playerReference;
+	
 	public Rigidbody2D player;
 	public AudioSource walk;
 	
+	void Awake(){
+		playerReference = this;
+	}
+
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.UpArrow)) {
