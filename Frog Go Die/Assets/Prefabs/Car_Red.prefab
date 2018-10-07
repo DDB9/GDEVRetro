@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212368024119613528}
   - component: {fileID: 114926306118930242}
   - component: {fileID: 70172504577046072}
-  - component: {fileID: 50295074969424060}
+  - component: {fileID: 50011576156043020}
   m_Layer: 0
   m_Name: Car_Red
   m_TagString: Untagged
@@ -37,13 +37,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1597256363936948}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.19, y: -2.91, z: -1}
+  m_LocalPosition: {x: -7.6533647, y: -4.704111, z: -1}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50295074969424060
+--- !u!50 &50011576156043020
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
@@ -75,8 +75,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 36.9, y: 0}
-  m_Size: {x: 100.66, y: 47.16}
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 25.5, y: 12.07}
   m_Direction: 1
 --- !u!114 &114926306118930242
 MonoBehaviour:
@@ -89,10 +89,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a422b5c6750313c48ab3e2adf546dc2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1582635008439962, guid: 9c68046d7e4bdb1438d216641d54360c, type: 2}
-  rigBod: {fileID: 50295074969424060}
   minSpeed: 5
   maxSpeed: 10
+  speed: 0
+  rigBod: {fileID: 50011576156043020}
   rotationSpeed: 5
 --- !u!212 &212368024119613528
 SpriteRenderer:

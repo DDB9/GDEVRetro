@@ -13,7 +13,7 @@ public class EnemySpawner : MonoBehaviour {
 	private IEnumerator carSpawner(){
 		while (true){
 			Instantiate(car, transform.position, transform.rotation);
-			yield return new WaitForSeconds(1.75f);
+			yield return new WaitForSeconds(1.5f);
 		}
 	}
 }

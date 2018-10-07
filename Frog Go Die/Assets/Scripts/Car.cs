@@ -1,23 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
-public class Car : MonoBehaviour {
-
-	public GameObject target;
+public class Car : Enemy {
 
 	public Rigidbody2D rigBod;
 
-	public float minSpeed = 1;
-	public float maxSpeed = 5;
-
-	private float speed;
-
     public float rotationSpeed = 5;
-
-	void Start(){
-		speed = Random.Range(minSpeed, maxSpeed);
+	
+	void Awake(){
+		StartCoroutine(CarRot());
 	}
 
 	void FixedUpdate(){
@@ -26,9 +19,12 @@ public class Car : MonoBehaviour {
 		rigBod.MovePosition(rigBod.position + forward * Time.fixedDeltaTime * speed);
 	}
 
-	void OnTriggerEnter2D(Collider2D other){
-         transform.rotation = Quaternion.Slerp(transform.rotation, 
-		 									   Quaternion.LookRotation(other.transform.position - transform.position), 
-		 									   rotationSpeed * Time.deltaTime);
+	private IEnumerator CarRot(){
+		yield return new WaitForSeconds(0.5f);
+		transform.Rotate(0f, 0f, Random.Range(-15f, 15f));
+	}
+
+	private void OnTriggerEnter(Collider other){
+		PlayerDeath.playerDeath(car); // Research.
 	}
 }
