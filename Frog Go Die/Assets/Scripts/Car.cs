@@ -25,6 +25,6 @@ public class Car : Enemy {
 	}
 
 	private void OnTriggerEnter(Collider other){
-		PlayerDeath.playerDeath(car); // Research.
+		PlayerDeath.playerDeath(car); // Research. (Reviewers negeer dit maar. Het werkt momenteel niet maar het probleem ligt bij een anders script).
 	}
 }
