@@ -5,9 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerDeath : MonoBehaviour {
 
-	public static PlayerDeath instance = null;
-
-	public static void playerDeath(Enemy enemy){
+	public static void playerDeath(GameObject enemy){
 		if (enemy.tag == "Car"){
 			SceneManager.LoadScene(2);
 		}

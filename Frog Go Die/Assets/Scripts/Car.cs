@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 public class Car : Enemy {
 
 	public Rigidbody2D rigBod;
-
-    public float rotationSpeed = 5;
 	
 	void Awake(){
 		StartCoroutine(CarRot());
@@ -25,6 +23,6 @@ public class Car : Enemy {
 	}
 
 	private void OnTriggerEnter(Collider other){
-		PlayerDeath.playerDeath(car); // Research. (Reviewers negeer dit maar. Het werkt momenteel niet maar het probleem ligt bij een anders script).
+		PlayerDeath.playerDeath(GameManager.car);
 	}
-}
+} 

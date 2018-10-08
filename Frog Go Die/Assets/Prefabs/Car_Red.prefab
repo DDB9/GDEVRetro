@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 50011576156043020}
   m_Layer: 0
   m_Name: Car_Red
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,7 +93,6 @@ MonoBehaviour:
   maxSpeed: 10
   speed: 0
   rigBod: {fileID: 50011576156043020}
-  rotationSpeed: 5
 --- !u!212 &212368024119613528
 SpriteRenderer:
   m_ObjectHideFlags: 1
