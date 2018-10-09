@@ -23,6 +23,6 @@ public class Car : Enemy {
 	}
 
 	private void OnTriggerEnter(Collider other){
-		PlayerDeath.playerDeath(GameManager.car);
+	//	PlayerDeath.playerDeath(GameManager.car);
 	}
 } 
