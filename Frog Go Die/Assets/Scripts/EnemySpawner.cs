@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour {
 
+	public static EnemySpawner instance = null;
+
 	public GameObject car;
 	GameObject temp;
 

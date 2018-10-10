@@ -22,7 +22,7 @@ public class Car : Enemy {
 		transform.Rotate(0f, 0f, Random.Range(-15f, 15f));
 	}
 
-	private void OnTriggerEnter(Collider other){
-	//	PlayerDeath.playerDeath(GameManager.car);
+	private void OnTriggerEnter2D(Collider2D other){
+		PlayerDeath.DeathBy(this);
 	}
 } 
