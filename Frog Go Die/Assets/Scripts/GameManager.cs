@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
-		SceneManager.LoadScene(3);
+		if (other.tag == "Player"){
+			SceneManager.LoadScene(Random.Range(1, 3));
+		} else return;
 	}
 }

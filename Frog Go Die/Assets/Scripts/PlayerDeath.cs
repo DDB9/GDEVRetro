@@ -7,7 +7,7 @@ public class PlayerDeath : MonoBehaviour {
 
 	public static void DeathBy(Enemy enemy){
 		if (enemy.tag == "Car"){
-			SceneManager.LoadScene(2);
+			SceneManager.LoadScene("GameOverCar");
 		}
 	}
 }

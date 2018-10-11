@@ -12,8 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: fbc65cf3de0b67443842b58ec9728580
   - enabled: 1
-    path: Assets/Scenes/FrogGoDie.unity
+    path: Assets/Scenes/FrogGoDieRoad.unity
     guid: 0c5de7e0480d2a1409f515e5fbde7f3e
+  - enabled: 1
+    path: Assets/Scenes/FrogGoDieForest.unity
+    guid: f530ef584bb81bd49b4e3b25c64ffe3a
   - enabled: 1
     path: Assets/Scenes/GameOverCar.unity
     guid: e1f8373e09758e743b2610ddd93f96fa

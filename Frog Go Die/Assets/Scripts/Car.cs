@@ -18,11 +18,13 @@ public class Car : Enemy {
 	}
 
 	private IEnumerator CarRot(){
-		yield return new WaitForSeconds(0.5f);
+		yield return new WaitForSeconds(0.25f);
 		transform.Rotate(0f, 0f, Random.Range(-15f, 15f));
 	}
 
 	private void OnTriggerEnter2D(Collider2D other){
-		PlayerDeath.DeathBy(this);
+		if (other.tag == "Player"){
+			PlayerDeath.DeathBy(this);
+		} else if (other.tag == "Car") transform.Rotate(0f, 0f, Random.Range(-30, 30));
 	}
 } 
