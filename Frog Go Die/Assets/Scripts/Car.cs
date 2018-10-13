@@ -1,20 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Car : Enemy {
-
-	public Rigidbody2D rigBod;
 	
 	void Awake(){
 		StartCoroutine(CarRot());
-	}
-
-	void FixedUpdate(){
-		Vector2 forward = new Vector2(transform.right.x, transform.right.y);
-
-		rigBod.MovePosition(rigBod.position + forward * Time.fixedDeltaTime * speed);
 	}
 
 	private IEnumerator CarRot(){

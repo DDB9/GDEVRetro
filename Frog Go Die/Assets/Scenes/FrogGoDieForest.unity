@@ -136,7 +136,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 234371141}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 14.52, y: 0.08, z: 0}
+  m_LocalPosition: {x: 12.62, y: 0.4, z: 0}
   m_LocalScale: {x: 0.07, y: 0.07, z: 0}
   m_Children: []
   m_Father: {fileID: 354788852}
@@ -155,6 +155,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   car: {fileID: 1597256363936948, guid: 37dd1d01b068362489ad930e02f29784, type: 2}
   snake: {fileID: 1727015177304198, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
+  croc: {fileID: 0}
+  log: {fileID: 0}
 --- !u!1 &354788851
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,7 +592,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1116428752}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.66, y: -2.79, z: 0}
+  m_LocalPosition: {x: -0.25, y: -2.6, z: 0}
   m_LocalScale: {x: 0.069999985, y: 0.07000001, z: 0}
   m_Children: []
   m_Father: {fileID: 354788852}
@@ -609,6 +611,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   car: {fileID: 1597256363936948, guid: 37dd1d01b068362489ad930e02f29784, type: 2}
   snake: {fileID: 1727015177304198, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
+  croc: {fileID: 0}
+  log: {fileID: 0}
 --- !u!1 &1161143746
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,7 +831,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1344811851}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.3203309, y: -1.4312146, z: 0.26459378}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1006,7 +1010,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1695255187}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.56, y: -0.38, z: 0}
+  m_LocalPosition: {x: -0.26, y: -0.6, z: 0}
   m_LocalScale: {x: 0.07, y: 0.07, z: 0}
   m_Children: []
   m_Father: {fileID: 354788852}
@@ -1025,6 +1029,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   car: {fileID: 1597256363936948, guid: 37dd1d01b068362489ad930e02f29784, type: 2}
   snake: {fileID: 1727015177304198, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
+  croc: {fileID: 0}
+  log: {fileID: 0}
 --- !u!1 &1708320879
 GameObject:
   m_ObjectHideFlags: 0
@@ -1156,7 +1162,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1957186854}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 15.46, y: -1.79, z: 0}
+  m_LocalPosition: {x: 12.29, y: -1.62, z: 0}
   m_LocalScale: {x: 0.07, y: 0.07, z: 0}
   m_Children: []
   m_Father: {fileID: 354788852}
@@ -1175,3 +1181,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   car: {fileID: 1597256363936948, guid: 37dd1d01b068362489ad930e02f29784, type: 2}
   snake: {fileID: 1727015177304198, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
+  croc: {fileID: 0}
+  log: {fileID: 0}

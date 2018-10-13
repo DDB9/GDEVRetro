@@ -17,47 +17,46 @@ public class EnemySpawner : MonoBehaviour {
 
 		switch(buildIndex){								// This spawns enemies depending on the current scene's index.
 			case 1:
-				StartCoroutine(CarSpawner());
+				StartCoroutine(CarSpawner());			// Spawns cars if the current scene is the "road" level.
 				break;
 
 			case 2:
-				StartCoroutine(SnakeSpawner());
+				StartCoroutine(SnakeSpawner());			// Spawns snakes if the current scene is the "forest" level.
 				break;
 			
 			case 3:
-				// StartCoroutine(CrocLogSpawner());
+				// StartCoroutine(CrocLogSpawner());	// Spawns crocodiles and logs if the current scene is the "lake" level.
 				break;
 		}
 	}
 	
-	private IEnumerator CarSpawner(){
+	private IEnumerator CarSpawner(){													// --- CARS ---
 		while (true){
 			temp = Instantiate(car, transform.position, transform.rotation);
-			yield return new WaitForSeconds(1f);
-			Destroy(temp, 2);
+			yield return new WaitForSeconds(1f);										// Every second a new car is spawned...
+			Destroy(temp, 2);															// ...and destroyed after 2 seconds.
 		}
 	}
 
-	private IEnumerator SnakeSpawner(){
+	private IEnumerator SnakeSpawner(){													// --- SNAKES --- 
 		while (true){
 			temp = Instantiate(snake, transform.position, transform.rotation);
-			yield return new WaitForSeconds(1f);
-			Destroy(temp, 2);
+			yield return new WaitForSeconds(5f);										// Every 5 seconds a new snake is spawned (because they move slower and fire projectiles)...
+			Destroy(temp, 6);															// ...and destroyed after 6 seconds.
 		}
 	}
 
-	private IEnumerator CrocLogSpawner(){											// Spawns Logs and Crocodiles at random.
-		int crocOrLog = Random.Range(1, 2);											// Wether a croc or a log is being spawned is chosen randomly.
+	private IEnumerator CrocLogSpawner(){												// --- CROCS 'N LOGS ---
+		while (true){
+			int crocOrLog = Random.Range(1, 2);											// Wether a croc or a log is being spawned is chosen randomly.
 
-		if (crocOrLog == 1){														// Spawns a croc.
-			while (true){
+			if (crocOrLog == 1){														// Spawns a croc...
 				temp = Instantiate(croc, transform.position, transform.rotation);
 				yield return new WaitForSeconds(1f);
 				Destroy(temp, 1f);
+
 			}
-		}
-		if (crocOrLog == 2){														// Spawns on log.
-			while (true){
+			else if (crocOrLog == 2){													// ...or a log.
 				temp = Instantiate(log, transform.position, transform.rotation);
 				yield return new WaitForSeconds(1f);
 				Destroy(temp, 1f);

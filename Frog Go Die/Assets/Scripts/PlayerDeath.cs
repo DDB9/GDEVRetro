@@ -9,5 +9,8 @@ public class PlayerDeath : MonoBehaviour {
 		if (enemy.tag == "Car"){
 			SceneManager.LoadScene("GameOverCar");
 		}
+		if (enemy.tag == "Snake"){
+			SceneManager.LoadScene("GameOverSnake");
+		}
 	}
 }

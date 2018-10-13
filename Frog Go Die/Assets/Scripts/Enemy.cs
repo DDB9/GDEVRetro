@@ -6,23 +6,28 @@ public class Enemy : MonoBehaviour {
 
 	public static Enemy instance = null;
 
+	public Rigidbody2D rigBod;
+
 	public float minSpeed = 1;
 	public float maxSpeed = 5;
 
 	public float speed;
 
-	// Speed variable; Min and max speed (see car script)
 	// Target GameObject (player)
 	// public retreatDistance (Perhaps a collider could make this unnecessary)
 
 	// Use this for initialization
 	void Start () {
-		speed = Random.Range(minSpeed, maxSpeed);
+		rigBod = GetComponent<Rigidbody2D>();
 
+		speed = Random.Range(minSpeed, maxSpeed);
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	// FixedUpdate is called once per frame.
+	void FixedUpdate () {
+		Vector2 forward = new Vector2(transform.right.x, transform.right.y);
+
+		rigBod.MovePosition(rigBod.position + forward * Time.fixedDeltaTime * speed);
 		
 	}
 }
