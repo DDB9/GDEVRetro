@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1727015177304198}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.9163438, y: -3.8146214, z: -1}
+  m_LocalPosition: {x: -3.6482382, y: -2.5376573, z: -1}
   m_LocalScale: {x: -0.228, y: 0.228, z: 0.228}
   m_Children: []
   m_Father: {fileID: 0}
@@ -100,8 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigBod: {fileID: 50725494355267666}
-  minSpeed: 1
-  maxSpeed: 3
+  minSpeed: 3
+  maxSpeed: 5
   speed: 0
   venom: {fileID: 1140095727532302, guid: 26d732107418bab4e96bbb5775c78506, type: 2}
 --- !u!212 &212902847273417874

@@ -14,7 +14,7 @@ public class Snake : Enemy {
 	void Start () {
 		speed = Random.Range(minSpeed, maxSpeed); // Why do I have to create this part for the snake, but not for the car?
 
-		fireRate = 1f;
+		fireRate = 0.75f;
 		nextFire = Time.time;
 	}
 
