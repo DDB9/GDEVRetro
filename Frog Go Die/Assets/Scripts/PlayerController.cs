@@ -30,6 +30,19 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.RightArrow)) {
 			player.MovePosition(player.position + Vector2.right); 	// Moves the player 1 "unit" to the right.
 			walk.Play();
-		}		
+		}
+
+		// --- RRESTRICT MOVEMENT ---
+		if (transform.position.x <= -4f) {									// X-Axis
+			transform.position = new Vector2(-4f, transform.position.y);
+		} else if (transform.position.x >= 4.3f) {
+			transform.position = new Vector2(4.3f, transform.position.y);
+		}
+			
+		if (transform.position.y <= -3.94f) {								// Y-Axis
+			transform.position = new Vector3(transform.position.x, -3.94f, -2f);
+		} else if (transform.position.y >= 1.55f) {
+			transform.position = new Vector3(transform.position.x, 1.5f, -2f);
+		}
 	}
 }
