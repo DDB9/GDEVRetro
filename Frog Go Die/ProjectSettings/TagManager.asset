@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Car
   - Snake
+  - WaterTile
   layers:
   - Default
   - TransparentFX
