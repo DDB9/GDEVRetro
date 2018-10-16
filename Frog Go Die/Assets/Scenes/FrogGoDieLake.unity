@@ -142,6 +142,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2fd7eeb316c484bbde21877c1451b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  log: {fileID: 0}
+  car: {fileID: 0}
+  snake: {fileID: 0}
 --- !u!61 &5578519
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -401,8 +404,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   car: {fileID: 1597256363936948, guid: 37dd1d01b068362489ad930e02f29784, type: 2}
   snake: {fileID: 1727015177304198, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
-  croc: {fileID: 0}
-  log: {fileID: 0}
+  croc: {fileID: 1727015177304198, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
+  log: {fileID: 1964011135152090, guid: 345d3e382e5ed0346a6b581cf5ce6ecc, type: 2}
+  crocLog: {fileID: 1597256363936948, guid: 37dd1d01b068362489ad930e02f29784, type: 2}
 --- !u!1 &123474887
 GameObject:
   m_ObjectHideFlags: 0
@@ -884,7 +888,7 @@ RectTransform:
   m_Children:
   - {fileID: 158926620}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1066,6 +1070,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &328875785 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114863169079027900, guid: 345d3e382e5ed0346a6b581cf5ce6ecc,
+    type: 2}
+  m_PrefabInternal: {fileID: 749745772}
+  m_Script: {fileID: 11500000, guid: 9a10b12bcc17d874795c82cdbad2a905, type: 3}
 --- !u!1 &356873580
 GameObject:
   m_ObjectHideFlags: 0
@@ -1755,6 +1765,7 @@ MonoBehaviour:
   snake: {fileID: 1727015177304198, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
   croc: {fileID: 0}
   log: {fileID: 0}
+  crocLog: {fileID: 0}
 --- !u!1001 &749745772
 Prefab:
   m_ObjectHideFlags: 0
@@ -1845,6 +1856,7 @@ MonoBehaviour:
   snake: {fileID: 1727015177304198, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
   croc: {fileID: 0}
   log: {fileID: 0}
+  crocLog: {fileID: 0}
 --- !u!1 &801285371
 GameObject:
   m_ObjectHideFlags: 0
@@ -2013,7 +2025,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &868216678
 GameObject:
@@ -2838,6 +2850,7 @@ MonoBehaviour:
   snake: {fileID: 1727015177304198, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
   croc: {fileID: 0}
   log: {fileID: 0}
+  crocLog: {fileID: 0}
 --- !u!1 &1263790715
 GameObject:
   m_ObjectHideFlags: 0
@@ -3164,6 +3177,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2fd7eeb316c484bbde21877c1451b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  log: {fileID: 328875785}
+  car: {fileID: 114926306118930242, guid: 37dd1d01b068362489ad930e02f29784, type: 2}
+  snake: {fileID: 114382241105264286, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
 --- !u!4 &1407450524
 Transform:
   m_ObjectHideFlags: 0
@@ -3175,7 +3191,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1415408180
 GameObject:

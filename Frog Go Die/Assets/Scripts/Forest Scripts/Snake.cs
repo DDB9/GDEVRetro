@@ -12,8 +12,6 @@ public class Snake : Enemy {
 
 	// Use this for initialization
 	void Start () {
-		speed = Random.Range(minSpeed, maxSpeed); // Why do I have to create this part for the snake, but not for the car?
-
 		fireRate = 0.75f;
 		nextFire = Time.time;
 	}
@@ -27,12 +25,6 @@ public class Snake : Enemy {
 			Instantiate(venom, transform.position, Quaternion.identity);
 			nextFire = Time.time + fireRate;
 		}
-	}
-
-	void FixedUpdate(){
-		Vector2 forward = new Vector2(transform.right.x, transform.right.y); // Also this part.
-
-		rigBod.MovePosition(rigBod.position + forward * Time.fixedDeltaTime * speed); // And this.
 	}
 
 	void OnTriggerEnter2D(Collider2D other){

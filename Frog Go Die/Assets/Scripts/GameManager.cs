@@ -5,6 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
+	public Log log;
+	public Car car;
+	public Snake snake;
+
+	void Start(){
+		log.Move();
+		car.Move();
+		snake.Move();
+	}
+
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.tag == "Player"){
 			SceneManager.LoadScene(Random.Range(1, 3));

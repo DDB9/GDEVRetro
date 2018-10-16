@@ -7,7 +7,7 @@ public class EnemySpawner : MonoBehaviour {
 
 	public static EnemySpawner instance = null;
 
-	public GameObject car, snake, croc, log;
+	public GameObject car, snake, croc, log, crocLog;
 
 	private GameObject temp;					// Temporary gameobject because Unity doesnt allow destruction of assets (and neither do I).
 
@@ -25,7 +25,7 @@ public class EnemySpawner : MonoBehaviour {
 				break;
 			
 			case 3:
-				// StartCoroutine(CrocLogSpawner());	// Spawns crocodiles and logs if the current scene is the "lake" level.
+				StartCoroutine(CrocLogSpawner());	// Spawns crocodiles and logs if the current scene is the "lake" level.
 				break;
 		}
 	}
@@ -48,18 +48,26 @@ public class EnemySpawner : MonoBehaviour {
 
 	private IEnumerator CrocLogSpawner(){												// --- CROCS 'N LOGS ---
 		while (true){
-			int crocOrLog = Random.Range(1, 2);											// Wether a croc or a log is being spawned is chosen randomly.
+			int crocOrLog = Random.Range(1, 3);											// Wether a croc, a log or a crocLog is being spawned is chosen randomly.
 
 			if (crocOrLog == 1){														// Spawns a croc...
 				temp = Instantiate(croc, transform.position, transform.rotation);
 				yield return new WaitForSeconds(1f);
 				Destroy(temp, 1f);
+				continue;
 
 			}
-			else if (crocOrLog == 2){													// ...or a log.
+			else if (crocOrLog == 2){													// ...or a log...
 				temp = Instantiate(log, transform.position, transform.rotation);
 				yield return new WaitForSeconds(1f);
 				Destroy(temp, 1f);
+				continue;
+			}
+			else if (crocOrLog == 3){													// ...or a crocodile in disguise!
+				temp = Instantiate(crocLog, transform.position, transform.rotation);
+				yield return new WaitForSeconds(1f);
+				Destroy(temp, 1f);
+				continue;
 			}
 		}
 	}

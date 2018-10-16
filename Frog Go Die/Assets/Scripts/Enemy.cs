@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour {
 	}
 	
 	// FixedUpdate is called once per frame.
-	void FixedUpdate () {
+	public virtual void Move () {
 		Vector2 forward = new Vector2(transform.right.x, transform.right.y);
 
 		rigBod.MovePosition(rigBod.position + forward * Time.fixedDeltaTime * speed);
