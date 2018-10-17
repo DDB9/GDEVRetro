@@ -16,14 +16,14 @@ public class Enemy : MonoBehaviour {
 	// Target GameObject (player)
 	// public retreatDistance (Perhaps a collider could make this unnecessary)
 
-	// Use this for initialization
-	void Start () {
+	// SetSpeed sets the speed variable and assigns the object's rigidbody to the rigBod variable.
+	public void SetSpeed () {
 		rigBod = GetComponent<Rigidbody2D>();
 
 		speed = Random.Range(minSpeed, maxSpeed);
 	}
 	
-	// FixedUpdate is called once per frame.
+	// Move moves the object's rigidbody.
 	public virtual void Move () {
 		Vector2 forward = new Vector2(transform.right.x, transform.right.y);
 

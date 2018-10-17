@@ -5,11 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
+	public Croc croc;
 	public Log log;
 	public Car car;
 	public Snake snake;
 
 	void Start(){
+		croc.SetSpeed();
+		log.SetSpeed();
+		car.SetSpeed();
+		snake.SetSpeed();
+	}
+
+	void Update(){	
+		croc.Move();	
 		log.Move();
 		car.Move();
 		snake.Move();
