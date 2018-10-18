@@ -143,6 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   croc: {fileID: 0}
+  crocLog: {fileID: 0}
   log: {fileID: 0}
   car: {fileID: 0}
   snake: {fileID: 0}
@@ -347,11 +348,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04d4cdf17240fbe4882a983c24f613b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  car: {fileID: 1597256363936948, guid: 37dd1d01b068362489ad930e02f29784, type: 2}
-  snake: {fileID: 1727015177304198, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
-  croc: {fileID: 0}
-  log: {fileID: 0}
-  crocLog: {fileID: 0}
+  car: {fileID: 114926306118930242, guid: 37dd1d01b068362489ad930e02f29784, type: 2}
+  snake: {fileID: 114382241105264286, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
+  croc: {fileID: 114250776646007028, guid: 4dfad9cec6bf4ae43b49176eb0a4e73a, type: 2}
+  log: {fileID: 114863169079027900, guid: 345d3e382e5ed0346a6b581cf5ce6ecc, type: 2}
+  crocLog: {fileID: 114634525057003786, guid: f0de8039566c34d489aae79c734381a8, type: 2}
+  spawnRate: 1.5
 --- !u!1 &123474887
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,11 +970,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04d4cdf17240fbe4882a983c24f613b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  car: {fileID: 1597256363936948, guid: 37dd1d01b068362489ad930e02f29784, type: 2}
-  snake: {fileID: 1727015177304198, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
-  croc: {fileID: 0}
-  log: {fileID: 0}
-  crocLog: {fileID: 0}
+  car: {fileID: 114926306118930242, guid: 37dd1d01b068362489ad930e02f29784, type: 2}
+  snake: {fileID: 114382241105264286, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
+  croc: {fileID: 114250776646007028, guid: 4dfad9cec6bf4ae43b49176eb0a4e73a, type: 2}
+  log: {fileID: 114863169079027900, guid: 345d3e382e5ed0346a6b581cf5ce6ecc, type: 2}
+  crocLog: {fileID: 114634525057003786, guid: f0de8039566c34d489aae79c734381a8, type: 2}
+  spawnRate: 1.5
 --- !u!1 &778964734
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,11 +1016,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04d4cdf17240fbe4882a983c24f613b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  car: {fileID: 1597256363936948, guid: 37dd1d01b068362489ad930e02f29784, type: 2}
-  snake: {fileID: 1727015177304198, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
-  croc: {fileID: 0}
-  log: {fileID: 0}
-  crocLog: {fileID: 0}
+  car: {fileID: 114926306118930242, guid: 37dd1d01b068362489ad930e02f29784, type: 2}
+  snake: {fileID: 114382241105264286, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
+  croc: {fileID: 114250776646007028, guid: 4dfad9cec6bf4ae43b49176eb0a4e73a, type: 2}
+  log: {fileID: 114863169079027900, guid: 345d3e382e5ed0346a6b581cf5ce6ecc, type: 2}
+  crocLog: {fileID: 114634525057003786, guid: f0de8039566c34d489aae79c734381a8, type: 2}
+  spawnRate: 1.5
 --- !u!1 &827850632
 GameObject:
   m_ObjectHideFlags: 0
@@ -1392,11 +1396,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04d4cdf17240fbe4882a983c24f613b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  car: {fileID: 1597256363936948, guid: 37dd1d01b068362489ad930e02f29784, type: 2}
-  snake: {fileID: 1727015177304198, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
-  croc: {fileID: 0}
-  log: {fileID: 0}
-  crocLog: {fileID: 0}
+  car: {fileID: 114926306118930242, guid: 37dd1d01b068362489ad930e02f29784, type: 2}
+  snake: {fileID: 114382241105264286, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
+  croc: {fileID: 114250776646007028, guid: 4dfad9cec6bf4ae43b49176eb0a4e73a, type: 2}
+  log: {fileID: 114863169079027900, guid: 345d3e382e5ed0346a6b581cf5ce6ecc, type: 2}
+  crocLog: {fileID: 114634525057003786, guid: f0de8039566c34d489aae79c734381a8, type: 2}
+  spawnRate: 1.5
 --- !u!1 &1402004591
 GameObject:
   m_ObjectHideFlags: 0
@@ -1548,6 +1553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   croc: {fileID: 114250776646007028, guid: 4dfad9cec6bf4ae43b49176eb0a4e73a, type: 2}
+  crocLog: {fileID: 0}
   log: {fileID: 114863169079027900, guid: 345d3e382e5ed0346a6b581cf5ce6ecc, type: 2}
   car: {fileID: 114926306118930242, guid: 37dd1d01b068362489ad930e02f29784, type: 2}
   snake: {fileID: 114382241105264286, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}

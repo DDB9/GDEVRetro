@@ -143,6 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   croc: {fileID: 0}
+  crocLog: {fileID: 0}
   log: {fileID: 0}
   car: {fileID: 0}
   snake: {fileID: 0}
@@ -232,7 +233,7 @@ Transform:
   - {fileID: 1125185329}
   - {fileID: 1282125025}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &68978711
 GameObject:
@@ -386,7 +387,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 116065409}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.56, y: -0.38, z: 0}
+  m_LocalPosition: {x: -1.56, y: -0.64, z: 0}
   m_LocalScale: {x: 0.07, y: 0.07, z: 0}
   m_Children: []
   m_Father: {fileID: 1125185329}
@@ -403,11 +404,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04d4cdf17240fbe4882a983c24f613b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  car: {fileID: 1597256363936948, guid: 37dd1d01b068362489ad930e02f29784, type: 2}
-  snake: {fileID: 1727015177304198, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
-  croc: {fileID: 1849219846}
-  log: {fileID: 1964011135152090, guid: 345d3e382e5ed0346a6b581cf5ce6ecc, type: 2}
-  crocLog: {fileID: 1028943823518656, guid: f0de8039566c34d489aae79c734381a8, type: 2}
+  car: {fileID: 114926306118930242, guid: 37dd1d01b068362489ad930e02f29784, type: 2}
+  snake: {fileID: 114382241105264286, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
+  croc: {fileID: 114250776646007028, guid: 4dfad9cec6bf4ae43b49176eb0a4e73a, type: 2}
+  log: {fileID: 114863169079027900, guid: 345d3e382e5ed0346a6b581cf5ce6ecc, type: 2}
+  crocLog: {fileID: 114634525057003786, guid: f0de8039566c34d489aae79c734381a8, type: 2}
+  spawnRate: 1.5
 --- !u!1 &123474887
 GameObject:
   m_ObjectHideFlags: 0
@@ -889,7 +891,7 @@ RectTransform:
   m_Children:
   - {fileID: 158926620}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1716,48 +1718,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1001 &655965468
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4568010161443120, guid: 4dfad9cec6bf4ae43b49176eb0a4e73a, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 5.84
-      objectReference: {fileID: 0}
-    - target: {fileID: 4568010161443120, guid: 4dfad9cec6bf4ae43b49176eb0a4e73a, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -1.93
-      objectReference: {fileID: 0}
-    - target: {fileID: 4568010161443120, guid: 4dfad9cec6bf4ae43b49176eb0a4e73a, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4568010161443120, guid: 4dfad9cec6bf4ae43b49176eb0a4e73a, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4568010161443120, guid: 4dfad9cec6bf4ae43b49176eb0a4e73a, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4568010161443120, guid: 4dfad9cec6bf4ae43b49176eb0a4e73a, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4568010161443120, guid: 4dfad9cec6bf4ae43b49176eb0a4e73a, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4568010161443120, guid: 4dfad9cec6bf4ae43b49176eb0a4e73a, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4dfad9cec6bf4ae43b49176eb0a4e73a, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1 &694722428
 GameObject:
   m_ObjectHideFlags: 0
@@ -1781,7 +1741,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 694722428}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.66, y: -2.79, z: 0}
+  m_LocalPosition: {x: -2.66, y: -2.64, z: 0}
   m_LocalScale: {x: 0.069999985, y: 0.07000001, z: 0}
   m_Children: []
   m_Father: {fileID: 1125185329}
@@ -1798,11 +1758,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04d4cdf17240fbe4882a983c24f613b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  car: {fileID: 1597256363936948, guid: 37dd1d01b068362489ad930e02f29784, type: 2}
-  snake: {fileID: 1727015177304198, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
-  croc: {fileID: 1849219846}
-  log: {fileID: 1964011135152090, guid: 345d3e382e5ed0346a6b581cf5ce6ecc, type: 2}
-  crocLog: {fileID: 1028943823518656, guid: f0de8039566c34d489aae79c734381a8, type: 2}
+  car: {fileID: 114926306118930242, guid: 37dd1d01b068362489ad930e02f29784, type: 2}
+  snake: {fileID: 114382241105264286, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
+  croc: {fileID: 114250776646007028, guid: 4dfad9cec6bf4ae43b49176eb0a4e73a, type: 2}
+  log: {fileID: 114863169079027900, guid: 345d3e382e5ed0346a6b581cf5ce6ecc, type: 2}
+  crocLog: {fileID: 114634525057003786, guid: f0de8039566c34d489aae79c734381a8, type: 2}
+  spawnRate: 5
 --- !u!1 &778964734
 GameObject:
   m_ObjectHideFlags: 0
@@ -1826,7 +1787,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 778964734}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 14.52, y: 0.08, z: 0}
+  m_LocalPosition: {x: 14.52, y: 0.37, z: 0}
   m_LocalScale: {x: 0.07, y: 0.07, z: 0}
   m_Children: []
   m_Father: {fileID: 1125185329}
@@ -1843,11 +1804,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04d4cdf17240fbe4882a983c24f613b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  car: {fileID: 1597256363936948, guid: 37dd1d01b068362489ad930e02f29784, type: 2}
-  snake: {fileID: 1727015177304198, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
-  croc: {fileID: 1849219846}
-  log: {fileID: 1964011135152090, guid: 345d3e382e5ed0346a6b581cf5ce6ecc, type: 2}
-  crocLog: {fileID: 1028943823518656, guid: f0de8039566c34d489aae79c734381a8, type: 2}
+  car: {fileID: 114926306118930242, guid: 37dd1d01b068362489ad930e02f29784, type: 2}
+  snake: {fileID: 114382241105264286, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
+  croc: {fileID: 114250776646007028, guid: 4dfad9cec6bf4ae43b49176eb0a4e73a, type: 2}
+  log: {fileID: 114863169079027900, guid: 345d3e382e5ed0346a6b581cf5ce6ecc, type: 2}
+  crocLog: {fileID: 114634525057003786, guid: f0de8039566c34d489aae79c734381a8, type: 2}
+  spawnRate: 5
 --- !u!1 &801285371
 GameObject:
   m_ObjectHideFlags: 0
@@ -2016,7 +1978,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &868216678
 GameObject:
@@ -2820,7 +2782,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1244147571}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 15.46, y: -1.79, z: 0}
+  m_LocalPosition: {x: 15.46, y: -1.62, z: 0}
   m_LocalScale: {x: 0.07, y: 0.07, z: 0}
   m_Children: []
   m_Father: {fileID: 1125185329}
@@ -2837,17 +2799,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04d4cdf17240fbe4882a983c24f613b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  car: {fileID: 1597256363936948, guid: 37dd1d01b068362489ad930e02f29784, type: 2}
-  snake: {fileID: 1727015177304198, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
-  croc: {fileID: 1849219846}
-  log: {fileID: 1964011135152090, guid: 345d3e382e5ed0346a6b581cf5ce6ecc, type: 2}
-  crocLog: {fileID: 1028943823518656, guid: f0de8039566c34d489aae79c734381a8, type: 2}
---- !u!114 &1257601028 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114250776646007028, guid: 4dfad9cec6bf4ae43b49176eb0a4e73a,
-    type: 2}
-  m_PrefabInternal: {fileID: 655965468}
-  m_Script: {fileID: 11500000, guid: 82acf6dd6ae035f44b9ffdb887e0d395, type: 3}
+  car: {fileID: 114926306118930242, guid: 37dd1d01b068362489ad930e02f29784, type: 2}
+  snake: {fileID: 114382241105264286, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
+  croc: {fileID: 114250776646007028, guid: 4dfad9cec6bf4ae43b49176eb0a4e73a, type: 2}
+  log: {fileID: 114863169079027900, guid: 345d3e382e5ed0346a6b581cf5ce6ecc, type: 2}
+  crocLog: {fileID: 114634525057003786, guid: f0de8039566c34d489aae79c734381a8, type: 2}
+  spawnRate: 5
 --- !u!1 &1263790715
 GameObject:
   m_ObjectHideFlags: 0
@@ -3174,7 +3131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2fd7eeb316c484bbde21877c1451b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  croc: {fileID: 1257601028}
+  croc: {fileID: 114250776646007028, guid: 4dfad9cec6bf4ae43b49176eb0a4e73a, type: 2}
+  crocLog: {fileID: 114634525057003786, guid: f0de8039566c34d489aae79c734381a8, type: 2}
   log: {fileID: 114863169079027900, guid: 345d3e382e5ed0346a6b581cf5ce6ecc, type: 2}
   car: {fileID: 114926306118930242, guid: 37dd1d01b068362489ad930e02f29784, type: 2}
   snake: {fileID: 114382241105264286, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
@@ -3189,7 +3147,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1415408180
 GameObject:
@@ -3871,7 +3829,7 @@ Transform:
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1716765728
 GameObject:
@@ -4089,11 +4047,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &1849219846 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1577019224881044, guid: 4dfad9cec6bf4ae43b49176eb0a4e73a,
-    type: 2}
-  m_PrefabInternal: {fileID: 655965468}
 --- !u!1 &1852484854
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 50356335497557158}
   - component: {fileID: 61255385917793588}
   - component: {fileID: 114830279759118112}
+  - component: {fileID: 114634525057003786}
   m_Layer: 0
   m_Name: croclog
   m_TagString: Untagged
@@ -88,6 +89,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.83, y: 2.3527775}
   m_EdgeRadius: 0
+--- !u!114 &114634525057003786
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1028943823518656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82acf6dd6ae035f44b9ffdb887e0d395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigBod: {fileID: 50356335497557158}
+  minSpeed: 3
+  maxSpeed: 5
+  speed: 1.9756899
 --- !u!114 &114830279759118112
 MonoBehaviour:
   m_ObjectHideFlags: 1
