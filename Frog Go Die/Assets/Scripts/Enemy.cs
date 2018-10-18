@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
-	public static Enemy instance = null;
-
 	public Rigidbody2D rigBod;
 
 	public float minSpeed = 1;

@@ -20,6 +20,10 @@ public class Snake : Enemy {
 		CheckFireStatus();
 	}
 
+	public void SetSpeed(){ base.SetSpeed(); }
+
+	public override void Move(){ base.Move(); }
+
 	void CheckFireStatus(){
 		if (Time.time > nextFire){
 			Instantiate(venom, transform.position, Quaternion.identity);

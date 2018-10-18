@@ -8,6 +8,8 @@ public class Car : Enemy {
 		StartCoroutine(CarRot());
 	}
 
+	public override void Move(){ base.Move(); }
+
 	private IEnumerator CarRot(){
 		yield return new WaitForSeconds(0.25f);
 		transform.Rotate(0f, 0f, Random.Range(-15f, 15f));

@@ -142,6 +142,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2fd7eeb316c484bbde21877c1451b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  croc: {fileID: 0}
+  log: {fileID: 0}
+  car: {fileID: 0}
+  snake: {fileID: 0}
 --- !u!61 &5578519
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -347,6 +351,7 @@ MonoBehaviour:
   snake: {fileID: 1727015177304198, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
   croc: {fileID: 0}
   log: {fileID: 0}
+  crocLog: {fileID: 0}
 --- !u!1 &123474887
 GameObject:
   m_ObjectHideFlags: 0
@@ -828,7 +833,7 @@ RectTransform:
   m_Children:
   - {fileID: 158926620}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -967,6 +972,7 @@ MonoBehaviour:
   snake: {fileID: 1727015177304198, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
   croc: {fileID: 0}
   log: {fileID: 0}
+  crocLog: {fileID: 0}
 --- !u!1 &778964734
 GameObject:
   m_ObjectHideFlags: 0
@@ -1011,6 +1017,7 @@ MonoBehaviour:
   snake: {fileID: 1727015177304198, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
   croc: {fileID: 0}
   log: {fileID: 0}
+  crocLog: {fileID: 0}
 --- !u!1 &827850632
 GameObject:
   m_ObjectHideFlags: 0
@@ -1071,7 +1078,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &970261936
 GameObject:
@@ -1389,6 +1396,7 @@ MonoBehaviour:
   snake: {fileID: 1727015177304198, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
   croc: {fileID: 0}
   log: {fileID: 0}
+  crocLog: {fileID: 0}
 --- !u!1 &1402004591
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,6 +1547,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2fd7eeb316c484bbde21877c1451b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  croc: {fileID: 114250776646007028, guid: 4dfad9cec6bf4ae43b49176eb0a4e73a, type: 2}
+  log: {fileID: 114863169079027900, guid: 345d3e382e5ed0346a6b581cf5ce6ecc, type: 2}
+  car: {fileID: 114926306118930242, guid: 37dd1d01b068362489ad930e02f29784, type: 2}
+  snake: {fileID: 114382241105264286, guid: ed3fce6382e9f42408dbef13171413e6, type: 2}
 --- !u!4 &1407450524
 Transform:
   m_ObjectHideFlags: 0
@@ -1550,7 +1562,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1558601200
 GameObject:

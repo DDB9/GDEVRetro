@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Croc : Enemy {
 
+	public override void Move(){ base.Move(); }
+
 	IEnumerator OnTriggerStay2D(Collider2D other){
 		if (other.tag == "WaterTile"){
 			other.enabled = false;
