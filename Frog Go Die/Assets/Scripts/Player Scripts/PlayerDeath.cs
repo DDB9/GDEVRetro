@@ -12,5 +12,11 @@ public class PlayerDeath : MonoBehaviour {
 		if (enemy.tag == "Snake"){
 			SceneManager.LoadScene("GameOverSnake");
 		}
+		if (enemy.tag == "Croc"){
+			SceneManager.LoadScene("GameOverCroc");
+		}
+		if (enemy.tag == "CrocLog"){
+			SceneManager.LoadScene("GameOverCroclog");
+		}
 	}
 }

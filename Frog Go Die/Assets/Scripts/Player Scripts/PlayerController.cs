@@ -16,18 +16,22 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.UpArrow)) {
+			this.transform.parent = null;
 			player.MovePosition(player.position + Vector2.up); 		// Moves the player 1 "unit" forward.
 			walk.Play();
 		}		
 		if (Input.GetKeyDown(KeyCode.DownArrow)) {
+			this.transform.parent = null;
 			player.MovePosition(player.position + Vector2.down); 	// Moves the player 1 "unit" backwards.
 			walk.Play();
 		}		
 		if (Input.GetKeyDown(KeyCode.LeftArrow)) {
+			this.transform.parent = null;
 			player.MovePosition(player.position + Vector2.left); 	// Moves the player 1 "unit" to the left.
 			walk.Play();
 		}		
 		if (Input.GetKeyDown(KeyCode.RightArrow)) {
+			this.transform.parent = null;
 			player.MovePosition(player.position + Vector2.right); 	// Moves the player 1 "unit" to the right.
 			walk.Play();
 		}

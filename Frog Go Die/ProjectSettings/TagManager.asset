@@ -7,6 +7,8 @@ TagManager:
   - Car
   - Snake
   - WaterTile
+  - Croc
+  - CrocLog
   layers:
   - Default
   - TransparentFX

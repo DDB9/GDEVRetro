@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.tag == "Player"){
-			SceneManager.LoadScene(Random.Range(1, 3));
+			SceneManager.LoadScene(Random.Range(1, 4));
 		} else return;
 	}
 }

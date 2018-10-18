@@ -6,7 +6,9 @@ using UnityEngine;
 public class PlayerDrowning : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
-		SceneManager.LoadScene("GameOverLake");
+		if (other.tag == "Player"){
+			SceneManager.LoadScene("GameOverLake");
+		} else return;
 	}
 
 }

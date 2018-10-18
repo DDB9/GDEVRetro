@@ -32,7 +32,7 @@ public class MenuScript : MonoBehaviour {
 	}
 
 	// Loads a random (playable) scene for the player to start te game.
-	public void PlayGame(){ SceneManager.LoadScene(Random.Range(1, 3)); }
+	public void PlayGame(){ SceneManager.LoadScene(Random.Range(1, 4)); }
 
 	public void QuitGame(){
 		Application.Quit();								// Exits the aplication.
