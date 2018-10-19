@@ -12,27 +12,30 @@ public class MenuScript : MonoBehaviour {
 	public static bool paused = false;
 	public GameObject pauseMenuUI;
 
-	void Update(){
-		if (Input.GetKeyDown(KeyCode.Escape)){
-			if (paused) Resume(); 
+	void Update(){					
+		if (Input.GetKeyDown(KeyCode.Escape)){		// If the player presses the escape key the pause menu will open or close
+			if (paused) Resume();					// depending on the current state of the pause variable. 
 			else Pause();
 		}
 	}
 	
-	public void Resume(){
+	public void Resume(){					// Resumes the game when pressed.
 		pauseMenuUI.SetActive(false);
 		Time.timeScale = 1f;
 		paused = false;
 	}
 
-	void Pause(){
+	void Pause(){							// Pauses the game when pressed.
 		pauseMenuUI.SetActive(true);
 		Time.timeScale = 0f;
 		paused = true;
 	}
 
 	// Loads a random (playable) scene for the player to start te game.
-	public void PlayGame(){ SceneManager.LoadScene(Random.Range(1, 4)); }
+	public void PlayGame(){
+		Score.score = 0;
+		SceneManager.LoadScene(Random.Range(1, 4));
+	}
 
 	public void QuitGame(){
 		Application.Quit();								// Exits the aplication.

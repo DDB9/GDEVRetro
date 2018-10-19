@@ -11,7 +11,7 @@ public class EnemySpawner : MonoBehaviour {
 	public static List<Enemy> spawnList = new List<Enemy>();
 
 	[SerializeField]
-	private float spawnRate = 1.5f;
+	private float spawnRate = 1f;
 
 	void Start(){
 		Scene currentScene = SceneManager.GetActiveScene();
@@ -32,51 +32,51 @@ public class EnemySpawner : MonoBehaviour {
 		}
 	}
 	
-	private IEnumerator CarSpawner(){													// --- CARS ---
+	private IEnumerator CarSpawner(){														// --- CARS ---
 		while (true){
 			Enemy temp;
 			temp = Instantiate(car, transform.position, transform.rotation) as Enemy;
 			spawnList.Add(temp);
 			temp.SetSpeed();
-			yield return new WaitForSeconds(1f);										// Every second a new car is spawned...
-			Destroy(temp, 2);															// ...and destroyed after 2 seconds.
+			yield return new WaitForSeconds(1f);											// Every second a new car is spawned...
+			Destroy(temp, 2);																// ...and destroyed after 2 seconds.
 		}
 	}
 
-	private IEnumerator SnakeSpawner(){													// --- SNAKES --- 
+	private IEnumerator SnakeSpawner(){														// --- SNAKES --- 
 		while (true){
 			Enemy temp;
 			temp = Instantiate(snake, transform.position, transform.rotation) as Enemy;
 			spawnList.Add(temp);
 			temp.SetSpeed();
-			yield return new WaitForSeconds(5f);										// Every 5 seconds a new snake is spawned (because they move slower and fire projectiles)...
-			Destroy(temp, 6);															// ...and destroyed after 6 seconds.
+			yield return new WaitForSeconds(3f);											// Every 3 seconds a new snake is spawned (because they move slower and fire projectiles)...
+			Destroy(temp, 6);																// ...and destroyed after 6 seconds.
 		}
 	}
 
-	private IEnumerator CrocLogSpawner(){												// --- CROCS 'N LOGS ---
+	private IEnumerator CrocLogSpawner(){															// --- CROCS 'N LOGS ---
 		while (true){
 			Enemy temp;
-			int crocOrLog = Random.Range(1, 21);											// Wether a croc, a log or a crocLog is being spawned is chosen randomly.
+			int crocOrLog = Random.Range(1, 21);													// Wether a croc, a log or a crocLog is being spawned is chosen randomly. Crocs and Croclogs have less of a chance to spawn.
 
-			if (crocOrLog > 0 && crocOrLog < 7){														// Spawns a croc...
+			if (crocOrLog > 0 && crocOrLog < 5){													// Spawns a croc...
 				temp = Instantiate(croc, transform.position, transform.rotation) as Enemy;
 				spawnList.Add(temp);
 				temp.SetSpeed();
-				//Destroy(temp, 1f);
+				Destroy(temp, 5f);
 
 			}
-			else if (crocOrLog > 7 && crocOrLog < 18){													// ...or a log...
+			else if (crocOrLog > 5 && crocOrLog < 18){												// ...or a log...
 				temp = Instantiate(log, transform.position, transform.rotation) as Enemy;
 				spawnList.Add(temp);
 				temp.SetSpeed();
-				//Destroy(temp, 1f);
+				Destroy(temp, 5f);
 			}
-			else if (crocOrLog > 18 && crocOrLog < 21){													// ...or a crocodile in disguise!
+			else if (crocOrLog > 18 && crocOrLog < 21){												// ...or a crocodile in disguise!
 				temp = Instantiate(crocLog, transform.position, transform.rotation) as Enemy;
 				spawnList.Add(temp);
 				temp.SetSpeed();
-				//Destroy(temp, 1f);
+				Destroy(temp, 5f);
 			}
 			yield return new WaitForSeconds(spawnRate);
 		}

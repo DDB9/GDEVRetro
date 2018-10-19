@@ -100,8 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigBod: {fileID: 50789861474108634}
-  minSpeed: 3
-  maxSpeed: 5
+  minSpeed: 4
+  maxSpeed: 4
   speed: 4.134536
 --- !u!212 &212765916687748776
 SpriteRenderer:

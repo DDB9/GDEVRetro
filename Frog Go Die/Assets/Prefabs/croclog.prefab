@@ -101,8 +101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigBod: {fileID: 50356335497557158}
-  minSpeed: 3
-  maxSpeed: 5
+  minSpeed: 4
+  maxSpeed: 4
   speed: 1.9756899
 --- !u!114 &114830279759118112
 MonoBehaviour:

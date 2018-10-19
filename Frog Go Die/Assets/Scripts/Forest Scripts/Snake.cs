@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Snake : Enemy {
 
 	[SerializeField]
 	public GameObject venom;
+	public AudioSource snakeShoot;
 
 	private float fireRate;
 	private float nextFire;
@@ -20,12 +22,9 @@ public class Snake : Enemy {
 		CheckFireStatus();
 	}
 
-	public void SetSpeed(){ base.SetSpeed(); }
-
-	public override void Move(){ base.Move(); }
-
 	void CheckFireStatus(){
 		if (Time.time > nextFire){
+			snakeShoot.Play();
 			Instantiate(venom, transform.position, Quaternion.identity);
 			nextFire = Time.time + fireRate;
 		}
