@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Game Overs/GameOverSnake.unity
     guid: 4ed32fa2a1b99854fa7014f1c6240858
   - enabled: 1
+    path: Assets/Scenes/Game Overs/GameOverVenom.unity
+    guid: 1727ddd763d59c043839a624e124ec6e
+  - enabled: 1
     path: Assets/Scenes/Game Overs/GameOverLake.unity
     guid: 8b468cbfad4f61742b2409280c9b6f13
   - enabled: 1
