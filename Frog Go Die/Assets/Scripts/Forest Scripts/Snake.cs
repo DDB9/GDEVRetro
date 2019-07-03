@@ -5,7 +5,6 @@ using UnityEngine.Audio;
 
 public class Snake : Enemy {
 
-	[SerializeField]
 	public GameObject venom;
 	public AudioSource snakeShoot;
 

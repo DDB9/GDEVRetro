@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-	public static PlayerController playerReference;
+	public static PlayerController playerInstance;
 	
 	public Rigidbody2D player;
 	public AudioSource walk;
-	
-	void Awake(){
-		playerReference = this;
-	}
 
-	// Update is called once per frame
-	void Update () {
+    private void Awake() {
+        if (playerInstance == null) {
+            DontDestroyOnLoad(gameObject);
+            playerInstance = this;
+        }
+        else if (playerInstance != this) {
+            Destroy(gameObject);
+        }
+    }
+
+    // Update is called once per frame
+    void Update () {
 		if (Input.GetKeyDown(KeyCode.UpArrow)) {
 			this.transform.parent = null;
 			player.MovePosition(player.position + Vector2.up); 		// Moves the player 1 "unit" forward.

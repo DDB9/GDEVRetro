@@ -5,15 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class EnemySpawner : MonoBehaviour {
 
-	public static EnemySpawner instance = null;
-
 	public Enemy car, snake, croc, log, crocLog;
 	public static List<Enemy> spawnList = new List<Enemy>();
 
 	[SerializeField]
 	private float spawnRate = 1f;
 
-	void Start(){
+    void Start(){
 		Scene currentScene = SceneManager.GetActiveScene();
 		int buildIndex = currentScene.buildIndex;
 
