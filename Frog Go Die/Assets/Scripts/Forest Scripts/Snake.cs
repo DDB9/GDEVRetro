@@ -5,26 +5,30 @@ using UnityEngine.Audio;
 
 public class Snake : Enemy {
 
-	public GameObject venom;
+    public GameObject venom;
 	public AudioSource snakeShoot;
 
 	private float fireRate;
 	private float nextFire;
 
 	// Use this for initialization
-	void Start () {
-		fireRate = 0.75f;
+	public void OnEnable () {
+		fireRate = 1;
 		nextFire = Time.time;
+        SetSpeed();
 	}
 
-	void Update(){
-		CheckFireStatus();
-	}
+    public override void Update() {
+        base.Update();
+
+        CheckFireStatus();
+    }
 
 	void CheckFireStatus(){
 		if (Time.time > nextFire){
 			snakeShoot.Play();
-			Instantiate(venom, transform.position, Quaternion.identity);
+            ObjectPooler.instance.spawnFromPool("Venom", transform.position, Quaternion.identity);
+            //Instantiate(venom, transform.position, transform.rotation);
 			nextFire = Time.time + fireRate;
 		}
 	}

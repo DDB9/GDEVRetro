@@ -20,13 +20,6 @@ public class GameManager : MonoBehaviour {
     }
 
     void Update(){	
-		for (int i = 0; i < EnemySpawner.spawnList.Count; i++){		// Moves all the enmies in the EnemySpawner spawnList.
-			Enemy temp = EnemySpawner.spawnList[i];
-			if (temp != null){										//...Unless they're null of course.
-				temp.Move();
-			}
-		}
-
         // If any of the GameOver Scenes are currently the active scene
         if (SceneManager.GetActiveScene().name == "GameOverCar" || SceneManager.GetActiveScene().name == "GameOverCroc" || 
             SceneManager.GetActiveScene().name == "GameOverCroclog" || SceneManager.GetActiveScene().name == "GameOverLake" || 

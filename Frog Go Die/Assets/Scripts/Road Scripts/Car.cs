@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Car : Enemy {
-	
-	void Awake(){
-		StartCoroutine(CarRot());
-	}
 
-	public override void Move(){ base.Move(); }
+    public void OnEnable() {
+        StartCoroutine(CarRot());
+        SetSpeed();
+    }
 
-	private IEnumerator CarRot(){
+    private IEnumerator CarRot(){
 		yield return new WaitForSeconds(0.25f);
 		transform.Rotate(0f, 0f, Random.Range(-15f, 15f));
 	}
@@ -20,4 +19,5 @@ public class Car : Enemy {
 			PlayerDeath.DeathBy(this);
 		} else if (other.tag == "Car") transform.Rotate(0f, 0f, Random.Range(-30, 30));
 	}
+
 } 
