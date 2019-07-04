@@ -13,18 +13,31 @@ public class Snake : Enemy {
 
 	// Use this for initialization
 	public void OnEnable () {
-		fireRate = 1;
+        minSpeed = 1.5f;
+        maxSpeed = 5;
+        fireRate = 1;
 		nextFire = Time.time;
         SetSpeed();
 	}
 
-    public override void Update() {
-        base.Update();
+    public void Update() {
+        Vector2 forward = new Vector2(transform.right.x, transform.right.y);
+        rigBod.MovePosition(rigBod.position + forward * Time.fixedDeltaTime * speed);   // Moves the enemy forward.
 
-        CheckFireStatus();
+        CheckFireStatus();  // checks if the enemy can fire.
     }
 
-	void CheckFireStatus(){
+    public override void SetSpeed() {
+        rigBod = GetComponent<Rigidbody2D>();
+
+        if (gameObject.GetComponent<Snake>()) {
+            maxSpeed = 3;
+        }
+
+        speed = Random.Range(minSpeed, maxSpeed);
+    }
+
+    void CheckFireStatus(){
 		if (Time.time > nextFire){
 			snakeShoot.Play();
             ObjectPooler.instance.spawnFromPool("Venom", transform.position, Quaternion.identity);
