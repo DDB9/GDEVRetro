@@ -12,7 +12,7 @@ public class SnakeVenom : MonoBehaviour {
 
     bool ranOnce;
 	
-	public void OnEnable(){
+	private void OnEnable(){
         ranOnce = false;
 		rigBod = GetComponent<Rigidbody2D>();
 		target = GameObject.FindGameObjectWithTag("Player");
